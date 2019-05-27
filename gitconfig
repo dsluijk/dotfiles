@@ -1,0 +1,11 @@
+[user]
+    name = Dany Sluijk
+    email = dany@atlasdev.nl
+    signingkey = 5FA45C31C2E3B543
+
+[commit]
+    gpgsign = true
+
+[alias]
+    logs = log --show-signature
+
