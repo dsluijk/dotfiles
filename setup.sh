@@ -2,7 +2,7 @@
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-yay -Sy --noconfirm --needed fish neovim
+yay -Sy --noconfirm --needed fish neovim htop
 
 chsh -s /usr/bin/fish
 
