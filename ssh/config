@@ -1,0 +1,3 @@
+Host lithium
+	HostName lithium.atlasdev.nl
+	User atlasdev
