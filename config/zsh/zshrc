@@ -1,0 +1,8 @@
+autoload -Uz compinit promptinit
+compinit
+promptinit
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+GPG_TTY=$(tty)
+export GPG_TTY

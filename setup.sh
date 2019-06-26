@@ -17,7 +17,7 @@ if ! pacman -Qq | grep -qw yay; then
 	cd ${WORK} 
 fi
 
-yay -Sy --noconfirm --needed zsh neovim htop wget ccid bspwm sxhkd polybar xorg-xrandr btops-git neofetch rofi ranger
+yay -Sy --noconfirm --needed zsh zsh-syntax-highlighting neovim htop wget ccid bspwm sxhkd polybar xorg-xrandr btops-git neofetch rofi ranger
 
 if ! pacman -Qq | grep -qw st; then
 	git clone https://git.suckless.org/st /tmp/st
@@ -49,10 +49,13 @@ ln -sf ${BASEDIR}/config/bspwm ~/.config
 ln -sf ${BASEDIR}/config/sxhkd ~/.config
 ln -sf ${BASEDIR}/config/polybar ~/.config
 ln -sf ${BASEDIR}/config/zsh/zshrc ~/.zshrc
-ln -sf ${BASEDIR}/config/zsh/zlogin ~/.zlogin
+ln -sf ${BASEDIR}/config/zsh/zprofile ~/.zprofile
+ln -sf ${BASEDIR}/config/nvim ~/.config
 ln -sf ${BASEDIR}/config/rofi ~/.config
 
 chmod +x ~/.config/polybar/launch.sh
+
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 neofetch
 
