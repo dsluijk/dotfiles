@@ -9,3 +9,12 @@
 [alias]
     logs = log --show-signature
 
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+
+# This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
+[include]
+  path = /home/dsluijk/.netlify/helper/git-config

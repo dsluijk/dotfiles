@@ -2,7 +2,25 @@ autoload -Uz compinit promptinit
 compinit
 promptinit
 
+alias oldvim="vim"
+alias vim="nvim"
+alias vi="nvim"
+
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
+
+(cat ~/.cache/wal/sequences &)
+
+source ~/.cache/wal/colors-tty.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export GOPATH="$HOME/.go"
+export PATH="$PATH:$HOME/.go/bin"
+
+export PATH="$PATH:$HOME/.cargo/bin"
 
 GPG_TTY=$(tty)
 export GPG_TTY
+
+# The next line updates PATH for Netlify's Git Credential Helper.
+if [ -f '/home/dsluijk/.netlify/helper/path.zsh.inc' ]; then source '/home/dsluijk/.netlify/helper/path.zsh.inc'; fi
