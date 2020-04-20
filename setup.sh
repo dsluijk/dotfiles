@@ -34,8 +34,8 @@ gpg --import /tmp/pgp.asc
 
 mkdir -p ~/.ssh ~/.config
 
-ln -sf ${BASEDIR}/config/zsh/zshrc ~/.zshrc
-ln -sf ${BASEDIR}/config/zsh/zprofile ~/.zprofile
+ln -sf ${BASEDIR}/zsh/zshrc ~/.zshrc
+ln -sf ${BASEDIR}/zsh/zprofile ~/.zprofile
 
 ln -sf ${BASEDIR}/gitconfig ~/.gitconfig
 ln -sf ${BASEDIR}/ssh/authorized_keys ~/.ssh/authorized_keys
