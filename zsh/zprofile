@@ -1,0 +1,5 @@
+if [[ -z $DISPLAY && $TTY = "/dev/tty1" ]]; then
+	systemctl --user import-environment
+    systemctl --wait --user start sway.service
+fi
+

@@ -17,7 +17,7 @@ if ! pacman -Qq | grep -qw yay; then
 	cd ${WORK} 
 fi
 
-yay -Sy --noconfirm --needed zsh zsh-syntax-highlighting alacritty neovim htop wget ccid bspwm sxhkd polybar xorg-xrandr btops-git neofetch rofi ranger npm nodejs rustup go go-tools python-pywal maim xclip
+yay -Sy --noconfirm --needed zsh alacritty neovim htop wget ccid sway neofetch ranger npm nodejs rustup go go-tools firefox pulseaudio networkmanager fasd qt5-wayland
 
 if [ $SHELL != "/usr/bin/zsh" ]
 then
@@ -32,24 +32,20 @@ export GPG_TTY=$(tty)
 wget https://keybase.io/atlasdev/pgp_keys.asc -O /tmp/pgp.asc
 gpg --import /tmp/pgp.asc
 
-mkdir -p ~/.ssh
+mkdir -p ~/.ssh ~/.config
+
+ln -sf ${BASEDIR}/config/zsh/zshrc ~/.zshrc
+ln -sf ${BASEDIR}/config/zsh/zprofile ~/.zprofile
 
 ln -sf ${BASEDIR}/gitconfig ~/.gitconfig
 ln -sf ${BASEDIR}/ssh/authorized_keys ~/.ssh/authorized_keys
 ln -sf ${BASEDIR}/ssh/config ~/.ssh/config
-ln -sf ${BASEDIR}/xinitrc ~/.xinitrc
 ln -sf ${BASEDIR}/wallpapers ~/.wallpapers
-ln -sf ${BASEDIR}/config/bspwm ~/.config
-ln -sf ${BASEDIR}/config/btops ~/.config
-ln -sf ${BASEDIR}/config/sxhkd ~/.config
-ln -sf ${BASEDIR}/config/alacritty ~/.config
-ln -sf ${BASEDIR}/config/polybar ~/.config
-ln -sf ${BASEDIR}/config/zsh/zshrc ~/.zshrc
-ln -sf ${BASEDIR}/config/zsh/zprofile ~/.zprofile
-ln -sf ${BASEDIR}/config/nvim ~/.config
-ln -sf ${BASEDIR}/config/rofi ~/.config
 
-chmod +x ~/.config/polybar/launch.sh
+ln -sf ${BASEDIR}/config/alacritty ~/.config
+ln -sf ${BASEDIR}/config/nvim ~/.config
+ln -sf ${BASEDIR}/config/sway ~/.config
+ln -sf ${BASEDIR}/config/systemd ~/.config
 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 

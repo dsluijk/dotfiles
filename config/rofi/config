@@ -1,9 +1,0 @@
-rofi.show: combi
-rofi.modi: combi
-rofi.combi-modi: window,ssh,drun
-rofi.lines: 10
-rofi.auto-select: true
-rofi.fixed-num-lines: true
-
-# Wal
-rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi

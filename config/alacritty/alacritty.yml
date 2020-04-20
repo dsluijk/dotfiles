@@ -1,8 +1,7 @@
 scrolling:
   multiplier: 2
 
-tabspaces: 4
-background_opacity: 0.2
-
 shell:
   program: /bin/zsh
+
+background_opacity: 0.85
