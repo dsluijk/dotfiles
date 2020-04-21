@@ -17,7 +17,7 @@ if ! pacman -Qq | grep -qw yay; then
 	cd ${WORK} 
 fi
 
-yay -Sy --noconfirm --needed zsh alacritty neovim htop wget ccid sway neofetch ranger npm nodejs rustup go go-tools firefox pulseaudio networkmanager fasd qt5-wayland dhcpcd rofi swayidle xorg-server-xwayland
+yay -Sy --noconfirm --needed zsh alacritty neovim htop wget ccid sway neofetch ranger npm nodejs rustup go go-tools firefox pulseaudio networkmanager fasd qt5-wayland dhcpcd rofi swayidle xorg-server-xwayland oh-my-zsh-git sl pygmentize
 
 sudo systemctl enable dhcpcd
 sudo systemctl start dhcpcd

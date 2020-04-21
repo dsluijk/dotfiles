@@ -22,8 +22,17 @@ set $menu rofi -show combi | xargs swaymsg exec --
 
 ### Output configuration
 
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output eDP-1 scale 2
+output * bg ~/.wallpapers/2ODpU2a.jpg fill
+
+## Iodine
+    # output eDP-1 scale 2
+
+## Sulfur
+    output DP-1 pos 0 0
+    output HDMI-A-1 pos 1920 -300 transform 270
+    focus output DP-1
+    exec swaymsg rename workspace 1 to 5
+    exec swaymsg rename workspace 2 to 1
 
 bindsym $mod+Shift+q exec sway exit
 default_border none
