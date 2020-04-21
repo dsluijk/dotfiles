@@ -17,7 +17,7 @@ if ! pacman -Qq | grep -qw yay; then
 	cd ${WORK} 
 fi
 
-yay -Sy --noconfirm --needed zsh alacritty neovim htop wget ccid sway neofetch ranger npm nodejs rustup go go-tools firefox pulseaudio networkmanager fasd qt5-wayland dhcpcd rofi swayidle xorg-server-xwayland oh-my-zsh-git sl pygmentize
+yay -Sy --noconfirm --needed zsh alacritty neovim htop wget ccid sway neofetch ranger npm nodejs rustup go go-tools firefox pulseaudio networkmanager fasd qt5-wayland dhcpcd rofi swayidle xorg-server-xwayland oh-my-zsh-git sl pygmentize xdg-user-dirs
 
 sudo systemctl enable dhcpcd
 sudo systemctl start dhcpcd
@@ -50,6 +50,7 @@ ln -sf ${BASEDIR}/config/nvim ~/.config
 ln -sf ${BASEDIR}/config/sway ~/.config
 ln -sf ${BASEDIR}/config/systemd ~/.config
 ln -sf ${BASEDIR}/config/rofi ~/.config
+ln -sf ${BASEDIR}/xdg.dirs ~/.config/user-dirs.dirs
 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
