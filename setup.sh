@@ -17,7 +17,7 @@ if ! pacman -Qq | grep -qw yay; then
 	cd ${WORK} 
 fi
 
-yay -Sy --noconfirm --needed zsh alacritty neovim htop wget ccid sway neofetch ranger npm nodejs rustup go go-tools firefox pulseaudio networkmanager fasd qt5-wayland dhcpcd rofi swayidle xorg-server-xwayland oh-my-zsh-git sl pygmentize xdg-user-dirs
+yay -Sy --noconfirm --needed zsh alacritty neovim htop wget ccid sway neofetch ranger npm nodejs rustup firefox pulseaudio fasd qt5-wayland dhcpcd rofi swayidle xorg-server-xwayland oh-my-zsh-git sl pygmentize xdg-user-dirs swayidle grim slurp wl-clipboard ccat
 
 sudo systemctl enable dhcpcd
 sudo systemctl start dhcpcd
@@ -58,7 +58,6 @@ rustup toolchain install stable
 rustup default stable
 
 mkdir -p ~/proj/{src,bin,pkg}
-mkdir ~/.go
 
 sudo npm install --global prettier
 

@@ -4,12 +4,13 @@ ZSH_THEME="amuse"
 DISABLE_AUTO_UPDATE="true"
 
 # Oh My ZSH plugins
-plugins=(archlinux cargo catimg colored-man-pages colorize command-not-found common-aliases docker docker-compose encode64 fasd gitfast golang gpg-agent helm jsontools kubectl minikube npm rust ssh-agent sudo systemd ufw urltools)
+plugins=(archlinux cargo colored-man-pages command-not-found common-aliases docker docker-compose encode64 fasd gitfast golang gpg-agent helm jsontools kubectl minikube npm rust ssh-agent sudo systemd ufw urltools)
 
 # Set path
 export GOPATH="$HOME/.proj"
 export PATH="$PATH:$HOME/.proj/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Aliases
 alias oldvim="vim"
@@ -24,3 +25,4 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+source ~/.config/sway/env

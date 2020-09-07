@@ -22,20 +22,23 @@ set $menu rofi -show combi | xargs swaymsg exec --
 
 ### Output configuration
 
-output * bg ~/.wallpapers/2ODpU2a.jpg fill
+output * bg ~/.wallpapers/QIEHsx.jpg fill
 
 ## Iodine
     # output eDP-1 scale 2
 
 ## Sulfur
-    output DP-1 pos 0 0
-    output HDMI-A-1 pos 1920 -300 transform 270
+    output DP-1 pos 0 0 scale 1.15 scale_filter linear
+#    output HDMI-A-1 pos 1920 -300 transform 270
     focus output DP-1
-    exec swaymsg rename workspace 1 to 5
-    exec swaymsg rename workspace 2 to 1
+#    exec swaymsg rename workspace 1 to 8
+#    exec swaymsg rename workspace 2 to 1
 
 bindsym $mod+Shift+q exec sway exit
 default_border none
+
+gaps inner 10
+hide_edge_borders smart_no_gaps
 
 ### Idle configuration
 
@@ -74,6 +77,10 @@ exec swayidle -w \
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+    # Take screenshot
+    bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
+
 #
 # Moving around:
 #
