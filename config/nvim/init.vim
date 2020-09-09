@@ -13,8 +13,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
-" colorscheme gruvbox
-colorscheme wal
+colorscheme gruvbox
 
 set number
 set tabstop=4

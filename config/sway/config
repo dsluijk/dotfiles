@@ -22,17 +22,19 @@ set $menu rofi -show combi | xargs swaymsg exec --
 
 ### Output configuration
 
-output * bg ~/.wallpapers/QIEHsx.jpg fill
+output * bg ~/.wallpapers/mixed.jpg fill
 
 ## Iodine
-    # output eDP-1 scale 2
+# output eDP-1 scale 2
 
 ## Sulfur
-    output DP-1 pos 0 0 scale 1.15 scale_filter linear
 #    output HDMI-A-1 pos 1920 -300 transform 270
-    focus output DP-1
 #    exec swaymsg rename workspace 1 to 8
 #    exec swaymsg rename workspace 2 to 1
+
+## Tungsten
+output HDMI-A-1 pos 0 0
+focus output DP-1
 
 bindsym $mod+Shift+q exec sway exit
 default_border none

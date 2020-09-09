@@ -32,8 +32,7 @@ sudo systemctl start pcscd
 
 export GPG_TTY=$(tty)
 
-wget https://keybase.io/atlasdev/pgp_keys.asc -O /tmp/pgp.asc
-gpg --import /tmp/pgp.asc
+gpg --import ${BASEDIR}/public.pgp
 
 mkdir -p ~/.ssh ~/.config
 
