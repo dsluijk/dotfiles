@@ -8,7 +8,6 @@ Plug 'rust-lang/rust.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'sbdchd/neoformat'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
@@ -16,9 +15,9 @@ call plug#end()
 colorscheme gruvbox
 
 set number
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set smartindent
 filetype plugin indent on
@@ -26,8 +25,6 @@ syntax on
 set spell
 
 let g:rustfmt_autosave = 1
-
-autocmd BufWritePre,InsertLeave * undojoin | Neoformat
 
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1

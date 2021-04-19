@@ -1,0 +1,51 @@
+{
+  "layer": "top",
+  "height": 30,
+  "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
+  "modules-center": ["sway/window"],
+  "modules-right": ["network", "pulseaudio", "cpu", "memory", "clock", "tray"],
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>",
+    "tooltip": false
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "clock": {
+    "interval": 1,
+    "timezone": "Europe/Amsterdam",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%a %d %b %H:%M}",
+    "format-alt": "{:%A %d %B %Y %H:%M:%S}",
+    "on-click-right": "xdg-open https://calendar.google.com"
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false
+  },
+  "network": {
+    "interface": "ens18",
+    "format-ethernet": "{ipaddr} ",
+    "format-linked": "(No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "memory": {
+    "format": "{}% "
+  },
+  "pulseaudio": {
+    "format": "{volume}% {icon} {format_source}",
+    "format-source": "",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  }
+}

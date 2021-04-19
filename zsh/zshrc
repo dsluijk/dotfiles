@@ -16,7 +16,6 @@ export PATH="$PATH:$HOME/.local/bin"
 alias oldvim="vim"
 alias vim="nvim"
 alias vi="nvim"
-alias cat="ccat"
 
 # Start Oh My ZSH
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh

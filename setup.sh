@@ -17,7 +17,7 @@ if ! pacman -Qq | grep -qw yay; then
 	cd ${WORK} 
 fi
 
-yay -Sy --noconfirm --needed zsh alacritty neovim htop wget ccid sway neofetch ranger npm nodejs rustup firefox pulseaudio fasd qt5-wayland dhcpcd rofi swayidle xorg-server-xwayland oh-my-zsh-git sl pygmentize xdg-user-dirs swayidle grim slurp wl-clipboard ccat
+yay -Sy --noconfirm --needed zsh alacritty neovim htop wget curl ccid sway neofetch ranger npm nodejs rustup firefox pulseaudio fasd qt5-wayland dhcpcd rofi swayidle xorg-server-xwayland oh-my-zsh-git sl pygmentize xdg-user-dirs grim slurp wl-clipboard playerctl waybar otf-font-awesome libnotify dunst
 
 sudo systemctl enable dhcpcd
 sudo systemctl start dhcpcd
@@ -41,12 +41,12 @@ ln -sf ${BASEDIR}/zsh/zprofile ~/.zprofile
 
 ln -sf ${BASEDIR}/gitconfig ~/.gitconfig
 ln -sf ${BASEDIR}/ssh/authorized_keys ~/.ssh/authorized_keys
-ln -sf ${BASEDIR}/ssh/config ~/.ssh/config
 ln -sf ${BASEDIR}/wallpapers ~/.wallpapers
 
 ln -sf ${BASEDIR}/config/alacritty ~/.config
 ln -sf ${BASEDIR}/config/nvim ~/.config
 ln -sf ${BASEDIR}/config/sway ~/.config
+ln -sf ${BASEDIR}/config/waybar ~/.config
 ln -sf ${BASEDIR}/config/systemd ~/.config
 ln -sf ${BASEDIR}/config/rofi ~/.config
 ln -sf ${BASEDIR}/xdg.dirs ~/.config/user-dirs.dirs

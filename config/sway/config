@@ -32,9 +32,10 @@ output * bg ~/.wallpapers/mixed.jpg fill
 #    exec swaymsg rename workspace 1 to 8
 #    exec swaymsg rename workspace 2 to 1
 
-## Tungsten
+## Gallium
 output HDMI-A-1 pos 0 0
-focus output DP-1
+output HDMI-A-1 scale 1.2
+focus output HDMI-A-1
 
 bindsym $mod+Shift+q exec sway exit
 default_border none
@@ -196,17 +197,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+  swaybar_command waybar
 }
 
 ### Special keys
