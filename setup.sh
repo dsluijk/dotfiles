@@ -17,7 +17,7 @@ if ! pacman -Qq | grep -qw yay; then
     cd ${WORK}
 fi
 
-yay -Sy --noconfirm --needed zsh alacritty neovim htop wget curl ccid sway neofetch ranger npm nodejs rustup firefox fasd qt5-wayland dhcpcd rofi swayidle xorg-server-xwayland oh-my-zsh-git sl pygmentize xdg-user-dirs grim slurp wl-clipboard playerctl waybar otf-font-awesome libnotify dunst nm-applet NetworkManager sccache swaylock pipewire pipewire-pulse clipman brightnessctl zoxide fzf rust-analyzer python-pywal fd vscode-css-languageserver vscode-langservers-extracted dockerfile-language-server sqls typescript-language-server yaml-language-server
+yay -Sy --noconfirm --needed zsh alacritty neovim htop wget curl ccid sway neofetch ranger npm nodejs rustup firefox fasd qt5-wayland dhcpcd rofi swayidle xorg-server-xwayland oh-my-zsh-git sl pygmentize xdg-user-dirs grim slurp wl-clipboard playerctl waybar otf-font-awesome libnotify dunst nm-applet NetworkManager sccache swaylock pipewire pipewire-pulse clipman brightnessctl zoxide fzf rust-analyzer python-pywal fd vscode-css-languageserver vscode-langservers-extracted dockerfile-language-server sqls typescript-language-server yaml-language-server wal zoxide
 
 sudo systemctl enable dhcpcd
 sudo systemctl start dhcpcd
