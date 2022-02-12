@@ -1,8 +1,8 @@
 #!/bin/sh
 
 if [ "$EUID" -eq 0 ]
-	then echo "Please don't run as root"
-	exit
+    then echo "Please don't run as root"
+    exit
 fi
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -11,20 +11,20 @@ WORK=`pwd`
 sudo pacman -S --needed git
 
 if ! pacman -Qq | grep -qw yay; then
-	git clone https://aur.archlinux.org/yay.git /tmp/yay
-	cd /tmp/yay
-	makepkg -si
-	cd ${WORK} 
+    git clone https://aur.archlinux.org/yay.git /tmp/yay
+    cd /tmp/yay
+    makepkg -si
+    cd ${WORK}
 fi
 
-yay -Sy --noconfirm --needed zsh alacritty neovim htop wget curl ccid sway neofetch ranger npm nodejs rustup firefox pulseaudio fasd qt5-wayland dhcpcd rofi swayidle xorg-server-xwayland oh-my-zsh-git sl pygmentize xdg-user-dirs grim slurp wl-clipboard playerctl waybar otf-font-awesome libnotify dunst network-manager-applet networkmanager
+yay -Sy --noconfirm --needed zsh alacritty neovim htop wget curl ccid sway neofetch ranger npm nodejs rustup firefox fasd qt5-wayland dhcpcd rofi swayidle xorg-server-xwayland oh-my-zsh-git sl pygmentize xdg-user-dirs grim slurp wl-clipboard playerctl waybar otf-font-awesome libnotify dunst nm-applet NetworkManager sccache swaylock pipewire pipewire-pulse clipman brightnessctl zoxide fzf rust-analyzer python-pywal fd vscode-css-languageserver vscode-langservers-extracted dockerfile-language-server sqls typescript-language-server yaml-language-server
 
 sudo systemctl enable dhcpcd
 sudo systemctl start dhcpcd
 
 if [ $SHELL != "/usr/bin/zsh" ]
 then
-	chsh -s /usr/bin/zsh
+    chsh -s /usr/bin/zsh
 fi
 
 sudo systemctl enable pcscd
@@ -60,6 +60,8 @@ rustup default stable
 mkdir -p ~/proj/{src,bin,pkg}
 
 sudo npm install --global prettier
+
+wal -i ~/wallpapers/mixed.jpg -a "alpha"
 
 neofetch
 

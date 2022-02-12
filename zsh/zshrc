@@ -11,17 +11,24 @@ export GOPATH="$HOME/.proj"
 export PATH="$PATH:$HOME/.proj/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.local/bin"
+export EDITOR="nvim"
 
 # Aliases
 alias oldvim="vim"
 alias vim="nvim"
 alias vi="nvim"
 
-# Start Oh My ZSH
+# Create Oh My ZSH cache dir
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
+
+# Set colors
+(cat ~/.cache/wal/sequences &)
+
+# Init Zoxide
+eval "$(zoxide init zsh)"
 
 source $ZSH/oh-my-zsh.sh
 source ~/.config/sway/env
